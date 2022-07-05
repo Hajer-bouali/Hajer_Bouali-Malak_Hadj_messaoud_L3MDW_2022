@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<title>
+			Manage Donation
+		</title>
+		<!-- Global stylesheets -->
+		<link href="https://fonts.googleapis.com/css?family=Roboto:400,300,100,500,700,900" rel="stylesheet" type="text/css">
+		<link href="{{ asset('templateAdmin/global_assets/css/icons/icomoon/styles.css') }}" rel="stylesheet" type="text/css">
+		<link href="{{ asset('templateAdmin/assets/css/bootstrap.min.css') }}" rel="stylesheet" type="text/css">
+		<link href="{{ asset('templateAdmin/assets/css/bootstrap_limitless.min.css') }}" rel="stylesheet" type="text/css">
+		<link href="{{ asset('templateAdmin/assets/css/layout.min.css') }}" rel="stylesheet" type="text/css">
+		<link href="{{ asset('templateAdmin/assets/css/components.min.css') }}" rel="stylesheet" type="text/css">
+		<link
+		href="{{ asset('templateAdmin/assets/css/colors.min.css') }}" rel="stylesheet" type="text/css">
+		<!-- /global stylesheets -->
+		{% block style %}{% endblock %}
+		<!-- Core JS files -->
+		<script src="{{ asset('templateAdmin/global_assets/js/main/jquery.min.js') }}"></script>
+		<script src="{{ asset('templateAdmin/global_assets/js/plugins/notifications/sweet_alert.min.js') }}"></script>
+		<script src="{{ asset('templateAdmin/global_assets/js/main/bootstrap.bundle.min.js') }}"></script>
+		<script src="{{ asset('templateAdmin/global_assets/js/plugins/loaders/blockui.min.js') }}"></script>
+		<!-- /core JS files -->
+		<!-- Theme JS files -->
+		<script src="{{ asset('templateAdmin/global_assets/js/plugins/tables/datatables/datatables.min.js') }}"></script>
+		<script src="{{ asset('templateAdmin/global_assets/js/demo_pages/datatables_basic.js') }}"></script>
+		<!-- /theme JS files -->
+		<!-- Theme JS files -->
+		<script src="{{ asset('templateAdmin/global_assets/js/plugins/notifications/bootbox.min.js') }}"></script>
+		<script src="{{ asset('templateAdmin/global_assets/js/demo_pages/components_modals.js') }}"></script>
+		<script src="{{ asset('templateAdmin/global_assets/js/plugins/extensions/jquery_ui/interactions.min.js') }}"></script>
+		<script src="{{ asset('templateAdmin/global_assets/js/demo_pages/form_select2.js') }}"></script>
+		<!-- /theme JS files -->
+
+		<script src="{{ asset('templateAdmin/global_assets/js/demo_pages/form_inputs.js') }}"></script>
+		<script src="{{ asset('templateAdmin/global_assets/js/demo_pages/form_wizard.js') }}"></script>
+		<script src="{{asset('templateAdmin/global_assets/js/plugins/forms/validation/validate.min.js')}}"></script>
+		<script src="{{asset('templateAdmin/global_assets/js/plugins/forms/inputs/inputmask.js')}}"></script>
+		<script src="{{asset('templateAdmin/global_assets/js/plugins/forms/selects/select2.min.js')}}"></script>
+		<script src="{{asset('templateAdmin/global_assets/js/plugins/forms/wizards/steps.min.js')}}"></script>
+
+
+		<!-- Theme JS files type adherent-->
+		<script src="{{ asset('templateAdmin/global_assets/js/plugins/extensions/jquery_ui/interactions.min.js')}}"></script>
+
+		<!-- /theme JS files -->
+		<!-- Theme JS files alpaca_advanced -->
+		<script src="{{ asset('templateAdmin/global_assets/js/plugins/forms/inputs/typeahead/handlebars.min.js')}}"></script>
+		<script src="{{ asset('templateAdmin/global_assets/js/plugins/forms/inputs/alpaca/alpaca.min.js')}}"></script>
+		<script src="{{ asset('templateAdmin/global_assets/js/plugins/forms/inputs/alpaca/price_format.min.js')}}"></script>
+		<script src="{{ asset('templateAdmin/global_assets/js/plugins/ui/prism.min.js')}}"></script>
+		<script src="{{ asset('templateAdmin/global_assets/js/plugins/editors/ckeditor/ckeditor.js')}}"></script>
+		<script src="{{ asset('templateAdmin/global_assets/js/plugins/forms/styling/uniform.min.js')}}"></script>
+
+		<script src="{{ asset('templateAdmin/assets/js/app.js')}}"></script>
+		<script src="{{ asset('templateAdmin/global_assets/js/demo_pages/alpaca_advanced.js')}}"></script>
+		<!-- /theme JS files alpaca_advanced -->
+
+
+		<!-- Theme JS files show_adherent -->
+		<script src="{{ asset('templateAdmin/global_assets/js/plugins/extensions/jquery_ui/touch.min.js')}}"></script>
+		<script src="{{ asset('templateAdmin/global_assets/js/demo_pages/components_collapsible.js')}}"></script>
+		<!-- /theme JS files show_adherent-->
+
+		<!-- Theme JS files upload -->
+		<script src="{{asset('templateAdmin/global_assets/js/plugins/uploaders/fileinput/plugins/purify.min.js')}}"></script>
+		<script src="{{asset('templateAdmin/global_assets/js/plugins/uploaders/fileinput/plugins/sortable.min.js')}}"></script>
+		<script src="{{asset('templateAdmin/global_assets/js/plugins/uploaders/fileinput/fileinput.min.js')}}"></script>
+
+		<script src="{{asset('templateAdmin/global_assets/js/demo_pages/uploader_bootstrap.js')}}"></script>
+		<!-- /theme JS files upload-->
+		<!-- Theme JS files dropzone-->
+		<script src="{{asset('templateAdmin/global_assets/js/plugins/uploaders/dropzone.min.js')}}"></script>
+
+		<script src="{{asset('templateAdmin/global_assets/js/demo_pages/uploader_dropzone.js')}}"></script>
+		<!-- /theme JS files dropzone-->
+		<!-- Theme JS files show -->
+		<script src="{{asset('templateAdmin/global_assets/js/demo_pages/user_pages_profile.js')}}"></script>
+		<script src="{{asset('templateAdmin/global_assets/js/plugins/visualization/echarts/echarts.min.js')}}"></script>
+		<script src="{{asset('templateAdmin/global_assets/js/plugins/ui/fullcalendar/fullcalendar.min.js')}}"></script>
+
+
+		<!-- /Theme JS files -->
+
+		<!-- /theme JS files -->
+		<!-- Theme JS files modale historique --><script src="{{ asset('templateAdmin/global_assets/js/demo_pages/components_popups.js')}}"> </script>
+		<!-- /theme JS files modale historique-->
+		<!-- Theme JS files -->
+		<script src="{{asset('templateAdmin/global_assets/js/plugins/visualization/echarts/echarts.min.js')}}"></script>
+
+		<script src="{{asset('templateAdmin/global_assets/js/demo_pages/charts/echarts/pies_donuts.js')}}"></script>
+		<!-- /theme JS files -->
+		<!-- Theme JS files -->
+		<script src="{{asset('templateAdmin/global_assets/js/plugins/visualization/echarts/echarts.min.js')}}"></script>
+
+		<!-- /theme JS files -->
+		<!-- Theme JS files Donut multiples-->
+		<script src="{{asset('templateAdmin/global_assets/js/plugins/visualization/echarts/echarts.min.js')}}"></script>
+
+		<script src="{{asset('templateAdmin/global_assets/js/demo_pages/charts/echarts/pies_donuts.js')}}"></script>
+		<!-- /theme JS files Donut multiples-->
+
+	</head>
+	<body>
+
+		<!-- Main navbar -->
+		<div class="navbar navbar-expand-md navbar-light">
+			<div class="navbar-brand">
+				<a href="index.html" class="d-inline-block-center">
+					<img src="{{ asset('templateAdmin/global_assets/images/logo_final.png') }}" alt="">
+				</a>
+			</div>
+			<div class="d-md-none">
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-mobile">
+					<i class="icon-tree5"></i>
+				</button>
+				<button class="navbar-toggler sidebar-mobile-main-toggle" type="button">
+					<i class="icon-paragraph-justify3"></i>
+				</button>
+			</div>
+			<div class="collapse navbar-collapse" id="navbar-mobile">
+				<ul class="navbar-nav">
+					<li class="nav-item">
+						<a href="#" class="navbar-nav-link sidebar-control sidebar-main-toggle d-none d-md-block">
+							<i class="icon-paragraph-justify3"></i>
+						</a>
+					</li>
+				</ul>
+				<span class="navbar-text ml-md-3 mr-md-auto">
+					<span class="badge bg-success">en ligne</span>
+				</span>
+				<span class="navbar-text ml-md-3 mr-md-auto"></span>
+				<ul class="navbar-nav">
+					<li class="nav-item dropdown dropdown-user">
+						<a href="#" class="navbar-nav-link dropdown-toggle" data-toggle="dropdown">
+							<img src="{{ asset('templateAdmin/global_assets/images/placeholders/placeholder.jpg') }}" class="rounded-circle" alt="">
+							{% if app.user %}
+								<span> {{ app.user.name }}
+								</span>
+							{% endif %}
+						</a>
+						<div class="dropdown-menu dropdown-menu-right">
+							<a href="{{ path('profil_index') }}" class="dropdown-item">
+								<i class="icon-user-plus"></i>
+								Mon profil
+							</a>
+							<div class="dropdown-divider"></div>
+							<a href="{{ path('user_profil_modifier') }}" class="dropdown-item">
+								<i class="icon-cog5"></i>
+								Modifier profil
+							</a>
+							<a href="/logout" class="dropdown-item">
+								<i class="icon-switch2"></i>
+								Déconnexion
+							</a>
+						</li>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<!-- /main navbar -->
+		<div class="navbar navbar-expand-md navbar-dark bg-teal-400 navbar-sticky" style="">
+			<div class="">
+				<a href="index.html" class="d-inline-block-center">
+					<img src="{{ asset('templateAdmin/global_assets/images/ihsenlogo.png') }}" class="rounded-circle" alt="">
+				</a>
+			</div>
+			<div class="text-center d-md-none w-100">
+				<button type="button" class="navbar-toggler dropdown-toggle" data-toggle="collapse" data-target="#navbar-second">
+					<i class="icon-unfold mr-2"></i>
+					Alternative navbar
+				</button>
+			</div>
+
+			<div class="navbar-collapse collapse" id="navbar-second"></div>
+
+		</div>
+		<!-- Page content -->
+		<div
+			class="page-content">
+			<!-- Main sidebar -->
+			<div
+				class="sidebar sidebar-dark sidebar-main sidebar-expand-md">
+				<!-- Main navigation -->
+				<div class="card card-sidebar-mobile">
+					<ul
+						class="nav nav-sidebar" data-nav-type="accordion">
+						<!-- Main -->
+						<li class="nav-item-header">
+							<div class="text-uppercase font-size-xs line-height-xs">
+								Menu
+							</div>
+							<i class="icon-menu" title="Menu"></i>
+						</li>
+
+						{% if is_granted('ROLE_ADMIN')%}
+							<li class="nav-item nav-item-submenu">
+								<a href="#" class="nav-link">
+									<i class="icon-people"></i>
+									<span>
+										Gestion des utilisateurs
+									</span>
+								</a>
+								<ul class="nav nav-group-sub" data-submenu-title="Starter kit">
+									<li class="nav-item">
+										<a href="{{ path('user_index') }}" class="nav-link">
+											Liste des utilisateurs
+										</a>
+									</li>
+									<li class="nav-item">
+										<a href="{{ path('user_create') }}" class="nav-link">
+											Ajouter utilisateur
+										</a>
+									</li>
+								</ul>
+							</li>
+						{% endif %}
+
+						{% if is_granted('ROLE_ADMIN') or is_granted('ROLE_SOCIAL') %}
+							<li class="nav-item ">
+								<a href="{{path('evenement_dashboard')}}" class="nav-link">
+									<i class="icon-home4"></i>
+									<span>Accueil Social</span>
+								</a>
+
+
+							</li>
+						{% endif %}
+
+						{% if is_granted('ROLE_ADMIN') or is_granted('ROLE_SOCIAL') %}
+							<li class="nav-item nav-item-submenu">
+								<a href="#" class="nav-link">
+									<i class="icon-paste"></i>
+									<span>Gestion des dossiers</span>
+								</a>
+								<ul class="nav nav-group-sub" data-submenu-title="Starter kit">
+									<li class="nav-item">
+										<a href="{{path('adherent_index')}}" class="nav-link">Liste des dossiers
+										</a>
+									</li>
+									<li class="nav-item">
+										<a href="{{path('adherent_new')}}" class="nav-link">Ajouter dossier</a>
+									</li>
+									{% if is_granted('ROLE_ADMIN') or is_granted('ROLE_SOCIAL') %}
+										<li class="nav-item">
+											<a href="{{path('app_typeadherent_index')}}" class="nav-link">Liste des dossiers
+											</a>
+										</li>
+										<li class="nav-item">
+											<a href="{{path('adherent_archive')}}" class="nav-link">liste des dossiers archivés</a>
+										</li>
+									{% endif %}
+								</ul>
+							</li>
+						{% endif %}
+
+						{% if is_granted('ROLE_ADMIN') or is_granted('ROLE_SOCIAL') %}
+							<li class="nav-item nav-item-submenu">
+								<a href="#" class="nav-link">
+									<i class="icon-stack"></i>
+									<span>
+										Gestion des reunions
+									</span>
+								</a>
+								<ul class="nav nav-group-sub" data-submenu-title="Starter kit">
+									<li class="nav-item">
+										<a href="{{ path('reunion_index') }}" class="nav-link">
+											Liste des reunions
+										</a>
+									</li>
+									<li class="nav-item">
+										<a href="{{ path('reunion_create') }}" class="nav-link">
+											Ajouter reunion
+										</a>
+									</li>
+								</ul>
+							</li>
+						{% endif %}
+
+						{% if is_granted('ROLE_ADMIN') or is_granted('ROLE_SOCIAL') %}
+							<li class="nav-item nav-item-submenu">
+								<a href="#" class="nav-link">
+									<i class="icon-cart5"></i>
+									<span>
+										Gestion des produits
+									</span>
+								</a>
+								<ul class="nav nav-group-sub" data-submenu-title="Starter kit">
+									<li class="nav-item">
+										<a href="{{ path('produit_index') }}" class="nav-link">
+											Liste des produits
+										</a>
+									</li>
+									<li class="nav-item">
+										<a href="{{ path('produit_new') }}" class="nav-link">
+											Ajouter produit
+										</a>
+									</li>
+									<li class="nav-item">
+										<a href="{{ path('type_produit_index') }}" class="nav-link">
+											Liste  type de produit
+										</a>
+									</li>
+									<li class="nav-item">
+										<a href="{{ path('type_produit_new') }}" class="nav-link">
+											Ajouter un type de produit
+										</a>
+									</li>
+								</ul>
+							</li>
+						{% endif %}
+
+						{% if is_granted('ROLE_ADMIN') or is_granted('ROLE_SOCIAL') %}
+							<li class="nav-item nav-item-submenu">
+								<a href="#" class="nav-link">
+									<i class="icon-calendar3"></i>
+									<span>
+										Gestion des événements
+									</span>
+								</a>
+								<ul class="nav nav-group-sub" data-submenu-title="Starter kit">
+									<li class="nav-item">
+										<a href="{{ path('evenement_index') }}" class="nav-link">
+											Liste des événements
+										</a>
+									</li>
+									<li class="nav-item">
+										<a href="{{ path('evenement_new') }}" class="nav-link">
+											Ajouter un événement
+										</a>
+									</li>
+									{% if is_granted('ROLE_ADMIN') or is_granted('ROLE_SOCIAL') %}
+
+										<li class="nav-item">
+											<a href="{{ path('type_evenement_index') }}" class="nav-link">
+												Liste des type des evenements
+											</a>
+										</li>
+										<li class="nav-item">
+											<a href="{{ path('type_evenement_new') }}" class="nav-link">
+												Ajouter un type d'evenement
+											</a>
+										</li>
+									{% endif %}
+								</ul>
+							</li>
+						{% endif %}
+
+						{% if is_granted('ROLE_ADMIN') or is_granted('ROLE_SOCIAL') %}
+							<li class="nav-item nav-item-submenu">
+								<a href="#" class="nav-link">
+									<i class="icon-tree7"></i>
+									<span>
+										Liste des opérations Stocks
+									</span>
+								</a>
+								<ul class="nav nav-group-sub" data-submenu-title="Starter kit">
+									<li class="nav-item">
+										<a href="{{ path('operation_stock_don_index')}}" class="nav-link">
+											<i class="icon-diff-added"></i>
+											<span>
+												Liste des opérations Don
+											</span>
+										</a>
+									</li>
+									<li class="nav-item">
+										<a href="{{ path('operation_stock_aide_index')}}" class="nav-link">
+											<i class="icon-diff-removed"></i>
+											<span>
+												Liste des opérations Aide
+											</span>
+										</a>
+									</li>
+								</ul>
+							</li>
+						{% endif %}
+
+						{% if is_granted('ROLE_ADMIN') or is_granted('ROLE_FINANCIER') %}
+							<li class="nav-item ">
+								<a href="{{path('caisse_dashboard')}}" class="nav-link">
+									<i class="icon-home4"></i>
+									<span>Accueil Financière</span>
+								</a>
+							</li>
+						{% endif %}
+
+						{% if is_granted('ROLE_ADMIN') or is_granted('ROLE_FINANCIER') %}
+							<li class="nav-item nav-item-submenu">
+								<a href="#" class="nav-link">
+									<i class="icon-cash"></i>
+									<span>
+										Gestion des caisses
+									</span>
+								</a>
+								<ul class="nav nav-group-sub" data-submenu-title="Starter kit">
+									<li class="nav-item">
+										<a href="{{ path('caisse_index') }}" class="nav-link">
+											Liste des caisses
+										</a>
+									</li>
+									<li class="nav-item">
+										<a href="{{ path('caisse_new') }}" class="nav-link">
+											Ajouter une caisse
+										</a>
+									</li>
+									<li class="nav-item">
+										<a href="{{ path('type_caisse_index') }}" class="nav-link">
+											Liste des type caisses
+										</a>
+									</li>
+									<li class="nav-item">
+										<a href="{{ path('type_caisse_new') }}" class="nav-link">
+											Ajouter un type caisse
+										</a>
+									</li>
+								</ul>
+							</li>
+						{% endif %}
+
+						{% if is_granted('ROLE_ADMIN') or is_granted('ROLE_FINANCIER') %}
+							<li class="nav-item nav-item-submenu">
+								<a href="#" class="nav-link">
+									<i class="icon-tree7"></i>
+									<span>
+										Liste des opérations financière
+									</span>
+								</a>
+								<ul class="nav nav-group-sub" data-submenu-title="Starter kit">
+									<li class="nav-item">
+										<a href="{{ path('operation_financiere_don_index')}}" class="nav-link">
+											<i class="icon-diff-added"></i>
+											<span>
+												Liste des opérations Don
+											</span>
+										</a>
+									</li>
+									<li class="nav-item">
+										<a href="{{ path('operation_financiere_aide_index')}}" class="nav-link">
+											<i class="icon-diff-removed"></i>
+											<span>
+												Liste des opérations Aide
+											</span>
+										</a>
+									</li>
+								</ul>
+							</li>
+						{% endif %}
+					</ul>
+				</div>
+			</div>
+			<!-- /main sidebar -->
+
+			<script type="text/javascript">
+		{% for type, messages in app.session.flashbag.all() %}
+			{% for message in messages %}
+				swal({
+					text:  '{{ message|raw }}',
+					type: 'warning',
+					showCancelButton: false,
+					confirmButtonColor: '#3085d6',
+					cancelButtonColor: '#d33',
+				})
+			{% endfor %}
+		{% endfor %}
+	</script>
+		
+		{% block body %}{% endblock %}
+		<!-- /main content -->
+
+		</div>
+		<!-- /page content -->
+	</div>
+		{% block javascript %}{% endblock %}
+	</body>
+</html>

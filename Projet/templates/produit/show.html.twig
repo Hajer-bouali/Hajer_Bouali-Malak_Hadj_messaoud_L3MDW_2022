@@ -1,0 +1,100 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+	<!-- Main content -->
+	<div
+		class="content-wrapper">
+
+		<!-- Page header -->
+		<div class="page-header page-header-light">
+			<div class="page-header-content header-elements-md-inline">
+				<div class="d-flex">
+					<div class="breadcrumb">
+						<a href="{{path('produit_index')}}" class="breadcrumb-item">
+							<i class="icon-home2 mr-2"></i>
+							Liste des produits</a>
+						<a href="#" class="breadcrumb-item">Modification de produit</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- /page header -->
+		<div
+			class="content">
+
+			<!-- Inner container -->
+			<div class="d-flex align-items-start flex-column flex-md-row">
+
+				<!-- Left content -->
+
+
+				<!-- Timeline -->
+					<div class="timeline timeline-left"> <div
+						class="timeline-container">
+
+
+						<!-- Date stamp -->
+						<div class="timeline-date text-muted">
+							<i class="icon-history mr-2"></i>
+							<span class="font-weight-semibold">Monday</span>, April 18
+						</div>
+						<!-- /date stamp -->
+
+
+						<!-- Invoices -->
+						<div class="timeline-row">
+							<div class="timeline-icon">
+								<div class="bg-warning-400">
+									<i class="icon-cash3"></i>
+								</div>
+							</div>
+
+							<div class="row">
+								<div>
+									<div class="card border-left-3 border-left-danger rounded-left-0">
+										<div class="card-body">
+											<div class="d-sm-flex align-item-sm-center flex-sm-nowrap">
+												<div>
+													<h6 class="font-weight-semibold">Leonardo Fellini</h6>
+
+												</div>
+
+												<div class="text-sm-right mb-0 mt-3 mt-sm-0 ml-auto">
+													<h6 class="font-weight-semibold">$8,750</h6>
+												</div>
+											</div>
+										</div>
+
+
+									</div>
+								</div>
+
+
+								
+							</div>
+						</div>
+						<!-- /invoices -->
+
+
+						<!-- Messages -->
+						<div class="timeline-row">
+							<div class="timeline-icon">
+								<div class="bg-info-400">
+									<i class="icon-comment-discussion"></i>
+								</div>
+							</div>
+
+
+						</div>
+						<!-- /messages -->
+
+
+					</div>
+
+					<!-- /timeline -->
+				</div>
+				<!-- /left content -->
+			</div>
+			<!-- /inner container -->
+		</div>
+	</div>
+{% endblock %}
